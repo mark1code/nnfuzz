@@ -1,0 +1,3 @@
+[submodule "tools/tensorfuzz"]
+	path = tools/tensorfuzz
+	url = https://github.com/brain-research/tensorfuzz.git
