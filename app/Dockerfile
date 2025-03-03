@@ -2,18 +2,24 @@ FROM python:3.8-slim
 
 WORKDIR /app
 
+# Install system dependencies
 RUN apt-get update && apt-get install -y gcc
-COPY requirements.txt .
+
+# Copy requirements and install
+COPY requirements.txt . 
 RUN pip install -r requirements.txt
 
-# shared directory exists in the container
-RUN mkdir -p /app/shared/uploads /app/shared/results
+# Create shared directories
+RUN mkdir -p /shared/uploads /shared/results
 
-ENV DOCKER_HOST=unix:///var/run/docker.sock
-
+# Copy app code
 COPY . .
 
-# mount shared volume
-VOLUME /app/shared
+# Set environment variables
+ENV DOCKER_HOST=unix:///var/run/docker.sock
+ENV FLASK_APP=app.py
+ENV FLASK_ENV=development
 
-CMD ["python", "app.py"]
+# Expose port and set command
+EXPOSE 5000
+CMD ["flask", "run", "--host=0.0.0.0"]

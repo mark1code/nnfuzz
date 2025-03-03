@@ -6,8 +6,9 @@ import json
 
 app = Flask(__name__, static_url_path='/static', static_folder='static')
 
-app.config['UPLOAD_FOLDER'] = '/app/shared/uploads'
-app.config['RESULTS_FOLDER'] = '/app/shared/results'
+# Make sure the shared folder paths are consistent across both Flask & TensorFuzz
+app.config['UPLOAD_FOLDER'] = '/shared/uploads'
+app.config['RESULTS_FOLDER'] = '/shared/results'
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 os.makedirs(app.config['RESULTS_FOLDER'], exist_ok=True)
 
@@ -27,17 +28,17 @@ def upload_file():
     if file.filename == '':
         return jsonify({"error": "No selected file"}), 400
 
-    # Save file to shared volume
+    # Save file inside the shared volume
     unique_id = str(uuid.uuid4())
     filename = f"{unique_id}_{file.filename}"
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     file.save(filepath)
 
     try:
-        # Run TensorFuzz container. file path passed is for inside the container
+        # Run TensorFuzz container
         container = client.containers.run(
             "nnfuzz_tensorfuzz",
-            f"python fuzz_runner.py /shared/uploads/{filename}",
+            command=["python", "/app/fuzz_runner.py", f"/shared/uploads/{filename}"],
             volumes={'nnfuzz_shared': {'bind': '/shared', 'mode': 'rw'}},
             detach=True
         )
@@ -48,7 +49,8 @@ def upload_file():
         container.remove()
 
         # Parse results
-        result_data = json.loads(logs)
+        with open(os.path.join(app.config['RESULTS_FOLDER'], 'result.json'), 'r') as f:
+            result_data = json.load(f)
 
         # Convert any paths in results to URLs
         if 'coverage_graph' in result_data:
@@ -61,7 +63,6 @@ def upload_file():
             "error": f"Fuzzing failed: {str(e)}",
             "details": logs if 'logs' in locals() else None
         }), 500
-
 
 # List uploaded files (to verify uploads are working)
 @app.route('/files', methods=['GET'])
