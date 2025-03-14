@@ -1,3 +1,4 @@
+# TensorFuzz Dockerfile
 FROM python:3.6-slim
 
 # Install system dependencies
@@ -5,13 +6,12 @@ RUN apt-get update && apt-get install -y \
     git cmake build-essential libopenblas-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy TensorFuzz repository
+# copy tensorfuzz repository and fuzzer runner
 COPY tensorfuzz /app/tensorfuzz
-COPY fuzz_runner.py /app/fuzz_runner.py
+COPY tensorfuzz_fuzzer.py /app/tensorfuzz_fuzzer.py
 
 WORKDIR /app
 
-# Install required Python dependencies
 RUN pip install \
     numpy==1.16.4 \
     absl-py==0.9.0 \
@@ -21,8 +21,7 @@ RUN pip install \
     matplotlib \
     h5py==2.10.0
 
-# Set Python path correctly
 ENV PYTHONPATH "${PYTHONPATH}:/app/tensorfuzz"
 
 # Default command
-CMD ["python", "/app/fuzz_runner.py"]
+CMD ["python", "/app/tensorfuzz_fuzzer.py"]

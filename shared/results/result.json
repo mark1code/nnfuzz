@@ -1,0 +1,430 @@
+{
+  "logs": {
+    "debug": [
+      "Changed directory to: /app/dlfuzz/MNIST", 
+      "Running DLFuzz command: python gen_diff.py [2] 0.5 5 0602 5 model1", 
+      "/usr/local/lib/python2.7/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.", 
+      "from ._conv import register_converters as _register_converters", 
+      "Using TensorFlow backend.", 
+      "WARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:68: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.", 
+      "", 
+      "WARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:504: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.", 
+      "", 
+      "WARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:3828: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.", 
+      "", 
+      "WARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:3652: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.", 
+      "", 
+      "WARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:166: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.", 
+      "", 
+      "WARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:171: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.", 
+      "", 
+      "WARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:176: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.", 
+      "", 
+      "2025-03-14 14:34:51.347412: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA", 
+      "2025-03-14 14:34:51.354621: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2903995000 Hz", 
+      "2025-03-14 14:34:51.357893: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x560336f92360 initialized for platform Host (this does not guarantee that XLA will be used). Devices:", 
+      "2025-03-14 14:34:51.357944: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version", 
+      "2025-03-14 14:34:51.359040: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory", 
+      "2025-03-14 14:34:51.359076: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)", 
+      "2025-03-14 14:34:51.359117: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (8daa54171fd1): /proc/driver/nvidia/version does not exist", 
+      "WARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:180: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.", 
+      "", 
+      "WARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:189: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.", 
+      "", 
+      "WARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:196: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.", 
+      "", 
+      "Model1 loaded", 
+      "model_1", 
+      "./seeds_50/14189_8.png", 
+      "covered neurons percentage 52 neurons 0.154", 
+      "used time : 0.417509", 
+      "./seeds_50/27700_2.png", 
+      "covered neurons percentage 52 neurons 0.231", 
+      "used time : 0.426341", 
+      "./seeds_50/59000_6.png", 
+      "covered neurons percentage 52 neurons 0.327", 
+      "used time : 0.508132", 
+      "./seeds_50/35604_8.png", 
+      "covered neurons percentage 52 neurons 0.327", 
+      "used time : 0.640024", 
+      "./seeds_50/206_0.png", 
+      "covered neurons percentage 52 neurons 0.346", 
+      "used time : 0.585142", 
+      "./seeds_50/30858_5.png", 
+      "covered neurons percentage 52 neurons 0.365", 
+      "used time : 0.757822", 
+      "./seeds_50/4998_1.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 0.910807", 
+      "./seeds_50/25128_7.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 0.894746", 
+      "./seeds_50/54713_9.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 1.067016", 
+      "./seeds_50/10452_6.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 0.997502", 
+      "./seeds_50/21638_2.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 1.306748", 
+      "./seeds_50/15463_6.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 1.295145", 
+      "./seeds_50/59013_8.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 1.699639", 
+      "./seeds_50/1657_8.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 1.674122", 
+      "./seeds_50/26619_0.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 1.390995", 
+      "./seeds_50/53167_3.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 1.760945", 
+      "./seeds_50/4363_7.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 1.97187", 
+      "./seeds_50/40469_9.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 2.133179", 
+      "./seeds_50/42070_3.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 2.859134", 
+      "./seeds_50/4520_6.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 2.556747", 
+      "./seeds_50/25755_0.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 2.264523", 
+      "./seeds_50/26802_1.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 2.649336", 
+      "./seeds_50/32023_5.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 2.639484", 
+      "./seeds_50/21535_1.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 2.992535", 
+      "./seeds_50/57026_4.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 3.088839", 
+      "./seeds_50/20608_0.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 2.704217", 
+      "./seeds_50/20663_6.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 3.983515", 
+      "./seeds_50/35254_4.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 2.900492", 
+      "./seeds_50/25970_1.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 3.288049", 
+      "./seeds_50/52134_3.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 3.758088", 
+      "./seeds_50/30545_8.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 4.530105", 
+      "./seeds_50/8531_0.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 3.048169", 
+      "./seeds_50/4413_5.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 3.883065", 
+      "./seeds_50/3194_4.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 4.093868", 
+      "./seeds_50/22386_2.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 3.913822", 
+      "./seeds_50/58144_3.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 3.701372", 
+      "./seeds_50/729_4.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 4.593422", 
+      "./seeds_50/18529_9.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 4.389263", 
+      "./seeds_50/35867_5.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 5.095421", 
+      "./seeds_50/32745_9.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 5.18561", 
+      "./seeds_50/50927_9.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 5.73502", 
+      "./seeds_50/43279_7.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 4.887659", 
+      "./seeds_50/32063_1.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 5.511594", 
+      "./seeds_50/14245_7.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 6.058845", 
+      "./seeds_50/34828_3.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 6.230248", 
+      "./seeds_50/47707_5.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 4.985194", 
+      "./seeds_50/59599_4.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 5.601699", 
+      "./seeds_50/15217_2.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 4.694257", 
+      "./seeds_50/22880_7.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 6.805295", 
+      "./seeds_50/54758_2.png", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "used time : 7.097718", 
+      "covered neurons percentage 52 neurons 0.385", 
+      "total_time = 156.164289", 
+      "average_norm = 2.067882137115185", 
+      "adversial num = 130", 
+      "average perb adversial = 0.2400375850785237", 
+      "Returned to directory: /app/dlfuzz"
+    ], 
+    "errors": []
+  }, 
+  "parameters": {
+    "num_mutations": 5, 
+    "num_neurons": 5, 
+    "strategy": "[2]", 
+    "output_dir": "0602", 
+    "threshold": 0.5, 
+    "dataset": "MNIST", 
+    "model_name": "model1"
+  }, 
+  "results": {
+    "timing": {
+      "start_time": 1741962891.89061, 
+      "end_time": 1741963047.517715, 
+      "duration_seconds": 155.6271049976349
+    }, 
+    "objectives_found": 130, 
+    "coverage": {
+      "overall": 0.385, 
+      "log": [
+        {
+          "iteration": 0, 
+          "coverage": 0.154
+        }, 
+        {
+          "iteration": 1, 
+          "coverage": 0.231
+        }, 
+        {
+          "iteration": 2, 
+          "coverage": 0.327
+        }, 
+        {
+          "iteration": 3, 
+          "coverage": 0.327
+        }, 
+        {
+          "iteration": 4, 
+          "coverage": 0.346
+        }, 
+        {
+          "iteration": 5, 
+          "coverage": 0.365
+        }, 
+        {
+          "iteration": 6, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 7, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 8, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 9, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 10, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 11, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 12, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 13, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 14, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 15, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 16, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 17, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 18, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 19, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 20, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 21, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 22, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 23, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 24, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 25, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 26, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 27, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 28, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 29, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 30, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 31, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 32, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 33, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 34, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 35, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 36, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 37, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 38, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 39, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 40, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 41, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 42, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 43, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 44, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 45, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 46, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 47, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 48, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 49, 
+          "coverage": 0.385
+        }, 
+        {
+          "iteration": 50, 
+          "coverage": 0.385
+        }
+      ]
+    }
+  }, 
+  "fuzzer": "dlfuzz", 
+  "iterations": 51, 
+  "model": "/shared/uploads/Model1.h5", 
+  "additional_info": {
+    "raw_output": "DLFuzz run completed.", 
+    "dlfuzz_output": "Changed directory to: /app/dlfuzz/MNIST\nRunning DLFuzz command: python gen_diff.py [2] 0.5 5 0602 5 model1\n/usr/local/lib/python2.7/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.\nfrom ._conv import register_converters as _register_converters\nUsing TensorFlow backend.\nWARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:68: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.\n\nWARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:504: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.\n\nWARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:3828: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.\n\nWARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:3652: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.\n\nWARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:166: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.\n\nWARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:171: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.\n\nWARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:176: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.\n\n2025-03-14 14:34:51.347412: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA\n2025-03-14 14:34:51.354621: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2903995000 Hz\n2025-03-14 14:34:51.357893: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x560336f92360 initialized for platform Host (this does not guarantee that XLA will be used). Devices:\n2025-03-14 14:34:51.357944: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version\n2025-03-14 14:34:51.359040: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory\n2025-03-14 14:34:51.359076: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)\n2025-03-14 14:34:51.359117: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (8daa54171fd1): /proc/driver/nvidia/version does not exist\nWARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:180: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.\n\nWARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:189: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.\n\nWARNING:tensorflow:From /usr/local/lib/python2.7/site-packages/keras/backend/tensorflow_backend.py:196: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.\n\nModel1 loaded\nmodel_1\n./seeds_50/14189_8.png\ncovered neurons percentage 52 neurons 0.154\nused time : 0.417509\n./seeds_50/27700_2.png\ncovered neurons percentage 52 neurons 0.231\nused time : 0.426341\n./seeds_50/59000_6.png\ncovered neurons percentage 52 neurons 0.327\nused time : 0.508132\n./seeds_50/35604_8.png\ncovered neurons percentage 52 neurons 0.327\nused time : 0.640024\n./seeds_50/206_0.png\ncovered neurons percentage 52 neurons 0.346\nused time : 0.585142\n./seeds_50/30858_5.png\ncovered neurons percentage 52 neurons 0.365\nused time : 0.757822\n./seeds_50/4998_1.png\ncovered neurons percentage 52 neurons 0.385\nused time : 0.910807\n./seeds_50/25128_7.png\ncovered neurons percentage 52 neurons 0.385\nused time : 0.894746\n./seeds_50/54713_9.png\ncovered neurons percentage 52 neurons 0.385\nused time : 1.067016\n./seeds_50/10452_6.png\ncovered neurons percentage 52 neurons 0.385\nused time : 0.997502\n./seeds_50/21638_2.png\ncovered neurons percentage 52 neurons 0.385\nused time : 1.306748\n./seeds_50/15463_6.png\ncovered neurons percentage 52 neurons 0.385\nused time : 1.295145\n./seeds_50/59013_8.png\ncovered neurons percentage 52 neurons 0.385\nused time : 1.699639\n./seeds_50/1657_8.png\ncovered neurons percentage 52 neurons 0.385\nused time : 1.674122\n./seeds_50/26619_0.png\ncovered neurons percentage 52 neurons 0.385\nused time : 1.390995\n./seeds_50/53167_3.png\ncovered neurons percentage 52 neurons 0.385\nused time : 1.760945\n./seeds_50/4363_7.png\ncovered neurons percentage 52 neurons 0.385\nused time : 1.97187\n./seeds_50/40469_9.png\ncovered neurons percentage 52 neurons 0.385\nused time : 2.133179\n./seeds_50/42070_3.png\ncovered neurons percentage 52 neurons 0.385\nused time : 2.859134\n./seeds_50/4520_6.png\ncovered neurons percentage 52 neurons 0.385\nused time : 2.556747\n./seeds_50/25755_0.png\ncovered neurons percentage 52 neurons 0.385\nused time : 2.264523\n./seeds_50/26802_1.png\ncovered neurons percentage 52 neurons 0.385\nused time : 2.649336\n./seeds_50/32023_5.png\ncovered neurons percentage 52 neurons 0.385\nused time : 2.639484\n./seeds_50/21535_1.png\ncovered neurons percentage 52 neurons 0.385\nused time : 2.992535\n./seeds_50/57026_4.png\ncovered neurons percentage 52 neurons 0.385\nused time : 3.088839\n./seeds_50/20608_0.png\ncovered neurons percentage 52 neurons 0.385\nused time : 2.704217\n./seeds_50/20663_6.png\ncovered neurons percentage 52 neurons 0.385\nused time : 3.983515\n./seeds_50/35254_4.png\ncovered neurons percentage 52 neurons 0.385\nused time : 2.900492\n./seeds_50/25970_1.png\ncovered neurons percentage 52 neurons 0.385\nused time : 3.288049\n./seeds_50/52134_3.png\ncovered neurons percentage 52 neurons 0.385\nused time : 3.758088\n./seeds_50/30545_8.png\ncovered neurons percentage 52 neurons 0.385\nused time : 4.530105\n./seeds_50/8531_0.png\ncovered neurons percentage 52 neurons 0.385\nused time : 3.048169\n./seeds_50/4413_5.png\ncovered neurons percentage 52 neurons 0.385\nused time : 3.883065\n./seeds_50/3194_4.png\ncovered neurons percentage 52 neurons 0.385\nused time : 4.093868\n./seeds_50/22386_2.png\ncovered neurons percentage 52 neurons 0.385\nused time : 3.913822\n./seeds_50/58144_3.png\ncovered neurons percentage 52 neurons 0.385\nused time : 3.701372\n./seeds_50/729_4.png\ncovered neurons percentage 52 neurons 0.385\nused time : 4.593422\n./seeds_50/18529_9.png\ncovered neurons percentage 52 neurons 0.385\nused time : 4.389263\n./seeds_50/35867_5.png\ncovered neurons percentage 52 neurons 0.385\nused time : 5.095421\n./seeds_50/32745_9.png\ncovered neurons percentage 52 neurons 0.385\nused time : 5.18561\n./seeds_50/50927_9.png\ncovered neurons percentage 52 neurons 0.385\nused time : 5.73502\n./seeds_50/43279_7.png\ncovered neurons percentage 52 neurons 0.385\nused time : 4.887659\n./seeds_50/32063_1.png\ncovered neurons percentage 52 neurons 0.385\nused time : 5.511594\n./seeds_50/14245_7.png\ncovered neurons percentage 52 neurons 0.385\nused time : 6.058845\n./seeds_50/34828_3.png\ncovered neurons percentage 52 neurons 0.385\nused time : 6.230248\n./seeds_50/47707_5.png\ncovered neurons percentage 52 neurons 0.385\nused time : 4.985194\n./seeds_50/59599_4.png\ncovered neurons percentage 52 neurons 0.385\nused time : 5.601699\n./seeds_50/15217_2.png\ncovered neurons percentage 52 neurons 0.385\nused time : 4.694257\n./seeds_50/22880_7.png\ncovered neurons percentage 52 neurons 0.385\nused time : 6.805295\n./seeds_50/54758_2.png\ncovered neurons percentage 52 neurons 0.385\nused time : 7.097718\ncovered neurons percentage 52 neurons 0.385\ntotal_time = 156.164289\naverage_norm = 2.067882137115185\nadversial num = 130\naverage perb adversial = 0.2400375850785237"
+  }
+}
